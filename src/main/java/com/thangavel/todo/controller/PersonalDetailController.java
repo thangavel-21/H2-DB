@@ -7,7 +7,7 @@ import java.util.List;
 import static com.thangavel.todo.constants.Constants.*;
 
 @RestController
-@RequestMapping("/details")
+@RequestMapping(API)
 public class PersonalDetailController {
     private final PersonalDetailService service;
 
