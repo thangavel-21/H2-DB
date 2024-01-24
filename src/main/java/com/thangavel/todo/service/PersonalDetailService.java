@@ -1,18 +1,19 @@
-package com.thangavel.H2Crud.service;
+package com.thangavel.todo.service;
 
-import com.thangavel.H2Crud.modal.PersonalDetails;
-import com.thangavel.H2Crud.repository.PersonalDetailRepo;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.thangavel.todo.modal.PersonalDetails;
+import com.thangavel.todo.repository.PersonalDetailRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PersonalDetailService {
 
-    @Autowired
-    private PersonalDetailRepo repo;
+    private final PersonalDetailRepo repo;
+
+    public PersonalDetailService(PersonalDetailRepo repo) {
+        this.repo = repo;
+    }
 
     public void addDetails(PersonalDetails details) {
         repo.save(details);

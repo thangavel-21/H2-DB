@@ -1,4 +1,4 @@
-package com.thangavel.H2Crud.modal;
+package com.thangavel.todo.modal;
 
 import jakarta.persistence.*;
 import lombok.Getter;

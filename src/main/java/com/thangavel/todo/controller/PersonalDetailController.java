@@ -1,13 +1,10 @@
-package com.thangavel.H2Crud.controller;
+package com.thangavel.todo.controller;
 
-import com.thangavel.H2Crud.constants.Constants;
-import com.thangavel.H2Crud.modal.PersonalDetails;
-import com.thangavel.H2Crud.service.PersonalDetailService;
-import org.aspectj.apache.bcel.classfile.Constant;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.thangavel.todo.modal.PersonalDetails;
+import com.thangavel.todo.service.PersonalDetailService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+import static com.thangavel.todo.constants.Constants.*;
 
 @RestController
 @RequestMapping("/details")
@@ -18,29 +15,29 @@ public class PersonalDetailController {
         this.service = service;
     }
 
-    @PostMapping(Constants.add)
+    @PostMapping(ADD)
     public String addDetails(@RequestBody PersonalDetails details) {
         service.addDetails(details);
         return "Added Successfully";
     }
 
-    @GetMapping(Constants.details)
+    @GetMapping(DETAILS_USER)
     public List<PersonalDetails> getAllDetails() {
         return  service.getAllDetails();
     }
 
-    @GetMapping(Constants.userById)
+    @GetMapping(USER)
     public PersonalDetails getUserById(@PathVariable Integer id) throws Exception {
         return service.getUserById(id);
     }
 
-    @PutMapping(Constants.updateById)
+    @PutMapping(UPDATE)
     public String updateUser(@PathVariable Integer id, @RequestBody PersonalDetails person) throws Exception {
         service.updateUserById(id, person);
         return "Success";
     }
 
-    @DeleteMapping(Constants.deleteById)
+    @DeleteMapping(DELETE_USER)
     public String userDelete(@PathVariable Integer id) {
         return "User Deleted";
     }

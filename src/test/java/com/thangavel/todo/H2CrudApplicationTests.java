@@ -1,4 +1,4 @@
-package com.thangavel.H2Crud;
+package com.thangavel.todo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

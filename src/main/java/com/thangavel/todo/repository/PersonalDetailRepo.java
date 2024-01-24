@@ -1,6 +1,6 @@
-package com.thangavel.H2Crud.repository;
+package com.thangavel.todo.repository;
 
-import com.thangavel.H2Crud.modal.PersonalDetails;
+import com.thangavel.todo.modal.PersonalDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
