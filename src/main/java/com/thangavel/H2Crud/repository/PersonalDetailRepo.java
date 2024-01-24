@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PersonalDetailRepo extends JpaRepository<PersonalDetails, Integer> {
-    PersonalDetails findByFname(String fname);
+    PersonalDetails findByFirstName(String firstName);
 
-    PersonalDetails findByLname(String lname);
+    PersonalDetails findByLastName(String lastName);
 }

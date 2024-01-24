@@ -15,7 +15,6 @@ public class PersonalDetailService {
     private PersonalDetailRepo repo;
 
     public void addDetails(PersonalDetails details) {
-        System.out.println("ddd" + details);
         repo.save(details);
     }
 
@@ -30,8 +29,8 @@ public class PersonalDetailService {
     public void updateUserById(Integer id, PersonalDetails person) throws Exception {
         PersonalDetails personalDetails = getUserById(id);
         personalDetails.setAddress(person.getAddress());
-        personalDetails.setFname(person.getFname());
-        personalDetails.setLname(person.getLname());
+        personalDetails.setFirstName(person.getFirstName());
+        personalDetails.setLastName(person.getLastName());
         repo.save(personalDetails);
     }
 
